@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CET138 ePortfolio | Full Stack Development</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="portfolio-header">
+  <div class="container">
+    <div class="header-label">CET138 Full Stack Development - Assignment 1</div>
+    <h1>Developer ePortfolio</h1>
+    <p style="color:#6b7280;font-size:.82rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.5rem;">Md Mobarak Safi</p>
+    <p>A portfolio covering the fundamentals of full stack web development.</p>
+    <div class="header-tags">
+      <span class="header-tag">HTML5</span>
+      <span class="header-tag">CSS3</span>
+      <span class="header-tag">JavaScript ES6+</span>
+      <span class="header-tag">Bootstrap 5</span>
+      <span class="header-tag">Full Stack</span>
+    </div>
+  </div>
+</header>
+
+<!-- TABS -->
+<div class="tabs-bar">
+  <div class="container">
+    <ul class="nav nav-tabs" id="portfolioTabs">
+      <li class="nav-item">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-fullstack" type="button">
+          <span class="tab-num">1</span>Full Stack
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-html" type="button">
+          <span class="tab-num">2</span>HTML
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-css" type="button">
+          <span class="tab-num">3</span>CSS
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-bootstrap" type="button">
+          <span class="tab-num">4</span>Bootstrap
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-js" type="button">
+          <span class="tab-num">5</span>JavaScript
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- TAB CONTENT -->
+<div class="container py-5">
+<div class="tab-content" id="portfolioTabContent">
+
+
+<!-- TAB 1: FULL STACK -->
+<div class="tab-pane fade show active" id="tab-fullstack">
+
+  <div class="section-heading">
+    <h2>What is Full Stack Development?</h2>
+    <p>Full stack development covers all three parts of a web app: what the user sees (frontend), the server that handles requests (backend), and the database that stores data.</p>
+  </div>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-4">
+      <div class="concept-card">
+        <div class="c-icon"><i class="bi bi-display"></i></div>
+        <h5>Frontend (Client-Side)</h5>
+        <p>What the user sees in the browser. Written in HTML, CSS and JavaScript. Frameworks like React sit in this layer.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="concept-card">
+        <div class="c-icon"><i class="bi bi-server"></i></div>
+        <h5>Backend (Server-Side)</h5>
+        <p>Runs on the server. Gets requests from the browser, runs the logic, talks to the database, and sends back a response. Built with Node.js, Python or PHP.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="concept-card">
+        <div class="c-icon"><i class="bi bi-database"></i></div>
+        <h5>Database</h5>
+        <p>Stores all the data. MySQL and PostgreSQL use structured tables with SQL. MongoDB stores data as JSON documents instead.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub-heading">Three-Layer Architecture</p>
+  <div class="mb-4">
+    <div class="stack-row">
+      <div class="s-icon"><i class="bi bi-window"></i></div>
+      <div>
+        <div class="stack-row-label">Presentation Layer</div>
+        <div class="stack-row-desc">Browser renders HTML/CSS. JavaScript runs here and sends requests to the backend.</div>
+      </div>
+      <div class="stack-tags d-none d-md-flex">
+        <span class="stack-tag">HTML</span>
+        <span class="stack-tag">CSS</span>
+        <span class="stack-tag">JS</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="s-icon"><i class="bi bi-gear"></i></div>
+      <div>
+        <div class="stack-row-label">Application Layer</div>
+        <div class="stack-row-desc">Server gets the request, runs the logic, queries the database, then returns data.</div>
+      </div>
+      <div class="stack-tags d-none d-md-flex">
+        <span class="stack-tag">Node.js</span>
+        <span class="stack-tag">REST API</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="s-icon"><i class="bi bi-database"></i></div>
+      <div>
+        <div class="stack-row-label">Data Layer</div>
+        <div class="stack-row-desc">Stores and returns data. Queried with SQL or document-based methods.</div>
+      </div>
+      <div class="stack-tags d-none d-md-flex">
+        <span class="stack-tag">MySQL</span>
+        <span class="stack-tag">MongoDB</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-muted" style="font-size:.875rem;"><strong style="color:#111827;">How a request flows:</strong> User clicks a button &rarr; JavaScript sends a request to the server &rarr; server queries the database &rarr; server sends back JSON &rarr; JavaScript updates the page. No full reload needed.</p>
+
+  <p class="sub-heading">Code Example: Full Stack Request</p>
+
+  <div class="cb">
+    <pre><code class="language-javascript">async function loadUsers() {
+  const response = await fetch('/api/users');
+  const users    = await response.json();
+
+  const list = document.getElementById('user-list');
+  users.forEach(user => {
+    const li = document.createElement('li');
+    li.textContent = `${user.name} - ${user.email}`;
+    list.appendChild(li);
+  });
+}
+
+loadUsers();</code></pre>
+  </div>
+
+  <div class="cb">
+    <pre><code class="language-javascript">const express = require('express');
+const app = express();
+
+app.get('/api/users', async (req, res) => {
+  const users = await db.query('SELECT id, name, email FROM users');
+  res.json(users);
+});
+
+app.listen(3000);</code></pre>
+  </div>
+
+  <p class="sub-heading">Common Stacks</p>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="concept-card">
+        <h5>MERN Stack</h5>
+        <p><strong>MongoDB, Express.js, React, Node.js.</strong> JavaScript runs on both the frontend and backend. Useful when you want one language across the whole project.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="concept-card">
+        <h5>LAMP Stack</h5>
+        <p><strong>Linux, Apache, MySQL, PHP.</strong> An older but widely used stack. Still powers a large portion of the web including WordPress sites.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab-fullstack -->
+
+
+<!-- TAB 2: HTML -->
+<div class="tab-pane fade" id="tab-html">
+
+  <div class="section-heading">
+    <h2>HTML</h2>
+    <p>HTML is the markup language used to build web pages. It uses tags to define structure, and the browser turns it into a DOM tree that JavaScript can access and change.</p>
+  </div>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-6">
+      <div class="concept-card">
+        <div class="c-icon"><i class="bi bi-code-slash"></i></div>
+        <h5>Elements and Tags</h5>
+        <p>Tags wrap content to give it meaning. Most have an opening and closing tag. Some like <code>&lt;img&gt;</code> and <code>&lt;br&gt;</code> are self-closing.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="concept-card">
+        <div class="c-icon"><i class="bi bi-layout-text-sidebar"></i></div>
+        <h5>Semantic HTML5</h5>
+        <p>Tags that describe what the content is, not just how it looks. Things like <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code> and <code>&lt;footer&gt;</code> help search engines and screen readers understand the page.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub-heading">Document Structure</p>
+  <div class="cb">
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;header&gt;
+    &lt;nav&gt;...navigation links...&lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h1&gt;Page Heading&lt;/h1&gt;
+      &lt;p&gt;A paragraph of content.&lt;/p&gt;
+      &lt;img src="photo.jpg" alt="Descriptive alt text"&gt;
+    &lt;/section&gt;
+    &lt;aside&gt;Related links / sidebar&lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;&amp;copy; 2025 My Portfolio&lt;/footer&gt;
+
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </div>
+
+  <p class="sub-heading">Semantic vs Non-Semantic</p>
+  <div class="info-box">
+    <strong>Why it matters:</strong> Using semantic tags means search engines and screen readers know what each part of the page is for. A <code>&lt;nav&gt;</code> is clearly for navigation. A <code>&lt;footer&gt;</code> is clearly a footer. Divs with IDs say nothing on their own.
+  </div>
+
+  <div class="cb">
+    <pre><code class="language-html">&lt;!-- Non-semantic approach --&gt;
+&lt;div id="header"&gt;...&lt;/div&gt;
+&lt;div id="nav"&gt;...&lt;/div&gt;
+&lt;div class="content"&gt;...&lt;/div&gt;
+
+&lt;!-- Semantic approach --&gt;
+&lt;header&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h1&gt;Blog Post Title&lt;/h1&gt;
+    &lt;time datetime="2025-06-17"&gt;17 June 2025&lt;/time&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Introduction&lt;/h2&gt;
+      &lt;p&gt;First paragraph...&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/article&gt;
+  &lt;aside&gt;Related articles&lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;&amp;copy; 2025 My Site&lt;/footer&gt;</code></pre>
+  </div>
+
+  <p class="sub-heading">Forms</p>
+  <div class="row g-4 align-items-start">
+    <div class="col-md-6">
+      <div class="cb" style="margin-top:0;">
+        <pre><code class="language-html">&lt;form action="/submit" method="POST"&gt;
+
+  &lt;label for="name"&gt;Full Name&lt;/label&gt;
+  &lt;input type="text" id="name"
+         name="name" required
+         placeholder="Mobarak Safi"&gt;
+
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+
+  &lt;label for="role"&gt;Role&lt;/label&gt;
+  &lt;select id="role" name="role"&gt;
+    &lt;option value="frontend"&gt;Frontend&lt;/option&gt;
+    &lt;option value="backend"&gt;Backend&lt;/option&gt;
+    &lt;option value="fullstack"&gt;Full Stack&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="demo-box">
+        <div class="demo-head"><i class="bi bi-eye"></i> Live Preview</div>
+        <div class="demo-body">
+          <form onsubmit="return false;">
+            <div class="mb-2">
+              <label class="form-label fw-medium" style="font-size:.84rem;">Full Name</label>
+              <input type="text" class="form-control form-control-sm" placeholder="Mobarak Safi">
+            </div>
+            <div class="mb-2">
+              <label class="form-label fw-medium" style="font-size:.84rem;">Email</label>
+              <input type="email" class="form-control form-control-sm" placeholder="you@example.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-medium" style="font-size:.84rem;">Role</label>
+              <select class="form-select form-select-sm">
+                <option>Frontend</option><option>Backend</option><option selected>Full Stack</option>
+              </select>
+            </div>
+            <button class="btn btn-sm btn-dark">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="demo-box mt-3">
+        <div class="demo-head"><i class="bi bi-table"></i> Semantic tag reference</div>
+        <table class="table table-sm table-hover mb-0" style="font-size:.82rem;">
+          <thead style="background:var(--bg-subtle);">
+            <tr><th class="ps-3">Tag</th><th>Purpose</th><th>Type</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="ps-3"><code>&lt;header&gt;</code></td><td>Page header</td><td>Semantic</td></tr>
+            <tr><td class="ps-3"><code>&lt;nav&gt;</code></td><td>Navigation</td><td>Semantic</td></tr>
+            <tr><td class="ps-3"><code>&lt;main&gt;</code></td><td>Main content</td><td>Semantic</td></tr>
+            <tr><td class="ps-3"><code>&lt;article&gt;</code></td><td>Standalone piece</td><td>Semantic</td></tr>
+            <tr><td class="ps-3"><code>&lt;div&gt;</code></td><td>Generic block</td><td>Non-semantic</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub-heading">Key Attributes</p>
+  <div class="cb">
+    <pre><code class="language-html">&lt;!-- href opens the link, target="_blank" opens it in a new tab --&gt;
+&lt;a href="https://example.com" target="_blank" rel="noopener"&gt;Link&lt;/a&gt;
+
+&lt;!-- src points to the image file, alt shows if the image fails to load --&gt;
+&lt;img src="avatar.jpg" alt="Profile photo" width="200"&gt;
+
+&lt;!-- id is unique per page, class can be shared across elements --&gt;
+&lt;div id="hero" class="section" data-theme="dark"&gt;...&lt;/div&gt;
+
+&lt;!-- required stops the form submitting if the field is empty --&gt;
+&lt;input type="email" name="email" required placeholder="Enter email"&gt;</code></pre>
+  </div>
+
+</div><!-- /tab-html -->
+
+
+<!-- TAB 3: CSS -->
+<div class="tab-pane fade" id="tab-css">
+
+  <div class="section-heading">
+    <h2>CSS</h2>
+    <p>CSS adds style to HTML. It controls colours, fonts, layout, spacing and how the page looks on different screen sizes.</p>
+  </div>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-6">
+      <div class="concept-card">
+        <div class="c-icon"><i class="bi bi-funnel"></i></div>
+        <h5>Selectors and the Cascade</h5>
+        <p>CSS targets elements using selectors. If two rules target the same element, specificity decides which one wins. IDs beat classes, classes beat tags.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="concept-card">
+        <div class="c-icon"><i class="bi bi-bounding-box"></i></div>
+        <h5>Box Model</h5>
+        <p>Every element is a box. It has content in the middle, then padding, then a border, then margin outside. Setting <code>box-sizing: border-box</code> stops elements being wider than expected.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="concept-card">
+        <div class="c-icon"><i class="bi bi-grid-3x3-gap"></i></div>
+        <h5>Flexbox and Grid</h5>
+        <p>Flexbox lines things up in a row or column. Grid is for two-dimensional layouts where you need control over both rows and columns at once.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="concept-card">
+        <div class="c-icon"><i class="bi bi-phone"></i></div>
+        <h5>Responsive Design</h5>
+        <p>Media queries let you change styles at different screen widths. Mobile-first means starting with styles for small screens, then adding rules for bigger ones.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub-heading">Selectors and Custom Properties</p>
+  <div class="cb">
+    <pre><code class="language-css">/* Variables defined once, used anywhere */
+:root {
+  --primary: #111827;
+  --radius:  8px;
+}
+
+/* Type selector */
+p { font-size: 1rem; line-height: 1.6; color: #374151; }
+
+/* Class selector */
+.card { border-radius: var(--radius); border: 1px solid #e5e7eb; }
+
+/* ID selector */
+#hero { background: #111827; color: white; }
+
+/* Pseudo-classes */
+a:hover        { text-decoration: underline; }
+li:first-child { font-weight: bold; }
+input:focus    { outline: 2px solid #111827; outline-offset: 2px; }
+
+/* Attribute selector */
+input[type="email"] { font-family: monospace; }</code></pre>
+  </div>
+
+  <p class="sub-heading">The Box Model</p>
+  <div class="row g-4 align-items-start">
+    <div class="col-md-6">
+      <div class="cb" style="margin-top:0;">
+        <pre><code class="language-css">.box {
+  width:  300px;
+  height: 150px;
+
+  padding: 16px 24px;   /* space inside the border */
+  border:  2px solid #111827;
+  margin:  24px auto;   /* space outside the border */
+
+  /* width now includes padding and border */
+  box-sizing: border-box;
+}</code></pre>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="demo-box">
+        <div class="demo-head"><i class="bi bi-eye"></i> Box Model Diagram</div>
+        <div class="demo-body">
+          <div class="bm-outer">
+            margin
+            <div class="bm-border">
+              border
+              <div class="bm-pad">
+                padding
+                <div class="bm-content">content</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub-heading">Flexbox</p>
+  <div class="row g-4 align-items-start">
+    <div class="col-md-6">
+      <div class="cb" style="margin-top:0;">
+        <pre><code class="language-css">.container {
+  display: flex;
+  justify-content: space-between; /* horizontal */
+  align-items:     center;        /* vertical   */
+  gap:    1rem;
+  flex-wrap: wrap;
+}
+
+.item { flex: 1; min-width: 150px; }</code></pre>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="demo-box">
+        <div class="demo-head"><i class="bi bi-eye"></i> Flexbox Demo</div>
+        <div class="demo-body">
+          <div class="flex-demo mb-2">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+          </div>
+          <div class="flex-demo" style="justify-content:center;">
+            <div class="flex-item">Centred A</div>
+            <div class="flex-item">Centred B</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub-heading">CSS Grid</p>
+  <div class="row g-4 align-items-start">
+    <div class="col-md-6">
+      <div class="cb" style="margin-top:0;">
+        <pre><code class="language-css">.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.featured { grid-column: span 2; }
+
+/* Named areas */
+.layout {
+  grid-template-areas:
+    "header header header"
+    "sidebar main   main  "
+    "footer footer footer";
+}</code></pre>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="demo-box">
+        <div class="demo-head"><i class="bi bi-eye"></i> Grid Demo</div>
+        <div class="demo-body">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;">
+            <div class="grid-cell" style="grid-column:span 2;">Featured (span 2)</div>
+            <div class="grid-cell">Col 3</div>
+            <div class="grid-cell">Col 1</div>
+            <div class="grid-cell">Col 2</div>
+            <div class="grid-cell">Col 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub-heading">Animations and Responsive Design</p>
+  <div class="row g-4 align-items-start">
+    <div class="col-md-6">
+      <div class="cb" style="margin-top:0;">
+        <pre><code class="language-css">/* Transition on hover */
+.btn {
+  transition: opacity 0.2s, transform 0.2s;
+}
+.btn:hover { opacity: 0.8; transform: translateY(-1px); }
+
+/* Keyframe animation */
+@keyframes morph {
+  0%   { border-radius: 10px; transform: rotate(0deg);   }
+  50%  { border-radius: 50%;  transform: rotate(180deg); }
+  100% { border-radius: 10px; transform: rotate(360deg); }
+}
+.shape { animation: morph 3s linear infinite; }</code></pre>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="cb" style="margin-top:0;">
+        <pre><code class="language-css">/* Start with mobile styles */
+.grid { grid-template-columns: 1fr; }
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Dark mode preference */
+@media (prefers-color-scheme: dark) {
+  body { background: #0f172a; color: #f1f5f9; }
+}</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-box mt-3">
+    <div class="demo-head"><i class="bi bi-eye"></i> @keyframes Demo - pure CSS, no JavaScript</div>
+    <div class="demo-body text-center">
+      <div class="anim-box"></div>
+      <p class="text-muted mb-0" style="font-size:.78rem;">border-radius and transform animated with @keyframes</p>
+    </div>
+  </div>
+
+</div><!-- /tab-css -->
+
+
+<!-- TAB 4: BOOTSTRAP -->
+<div class="tab-pane fade" id="tab-bootstrap">
+
+  <div class="section-heading">
+    <h2>Bootstrap Framework</h2>
+    <p>Bootstrap is a CSS framework that gives you a grid system, ready-made components, and utility classes. It saves a lot of time by handling common UI patterns out of the box.</p>
+  </div>
+
+  <div class="info-box">
+    <strong>Note:</strong> This whole portfolio is built using Bootstrap 5. The tabs, cards, buttons, modal and layout all use Bootstrap classes. No custom grid CSS was needed.
+  </div>
+
+  <p class="sub-heading">The 12-Column Grid</p>
+  <div class="cb">
+    <pre><code class="language-html">&lt;div class="container"&gt;
+  &lt;div class="row g-3"&gt;
+
+    &lt;!-- full width on mobile, half on tablet, one third on desktop --&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;Card A&lt;/div&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;Card B&lt;/div&gt;
+    &lt;div class="col-12 col-md-12 col-lg-4"&gt;Card C&lt;/div&gt;
+
+    &lt;!-- sidebar layout: 3 + 9 = 12 --&gt;
+    &lt;div class="col-md-3"&gt;Sidebar&lt;/div&gt;
+    &lt;div class="col-md-9"&gt;Main Content&lt;/div&gt;
+
+    &lt;!-- equal width columns --&gt;
+    &lt;div class="col"&gt;Equal&lt;/div&gt;
+    &lt;div class="col"&gt;Equal&lt;/div&gt;
+    &lt;div class="col"&gt;Equal&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+
+  <div class="demo-box mb-4">
+    <div class="demo-head"><i class="bi bi-eye"></i> Grid Demo - resize the window to see it change</div>
+    <div class="demo-body">
+      <div class="row g-2 text-center" style="font-size:.78rem;">
+        <div class="col-12 col-md-4"><div class="p-2 rounded" style="background:#111827;color:white;">col-12 col-md-4</div></div>
+        <div class="col-12 col-md-4"><div class="p-2 rounded" style="background:#111827;color:white;">col-12 col-md-4</div></div>
+        <div class="col-12 col-md-4"><div class="p-2 rounded" style="background:#111827;color:white;">col-12 col-md-4</div></div>
+        <div class="col-md-3"><div class="p-2 rounded" style="background:#374151;color:white;">col-md-3</div></div>
+        <div class="col-md-9"><div class="p-2 rounded" style="background:#374151;color:white;">col-md-9 (main content)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub-heading">Components</p>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="cb" style="margin-top:0;">
+        <pre><code class="language-html">&lt;!-- Buttons --&gt;
+&lt;button class="btn btn-dark"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-outline-secondary"&gt;Outline&lt;/button&gt;
+&lt;button class="btn btn-sm btn-danger"&gt;Small&lt;/button&gt;
+
+&lt;!-- Badges --&gt;
+&lt;span class="badge bg-dark"&gt;Active&lt;/span&gt;
+&lt;span class="badge bg-secondary"&gt;Pending&lt;/span&gt;
+
+&lt;!-- Alert --&gt;
+&lt;div class="alert alert-secondary"&gt;
+  Informational message.
+&lt;/div&gt;
+
+&lt;!-- Card --&gt;
+&lt;div class="card"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Title&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Content.&lt;/p&gt;
+    &lt;a href="#" class="btn btn-sm btn-dark"&gt;Action&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="demo-box">
+        <div class="demo-head"><i class="bi bi-eye"></i> Live Components</div>
+        <div class="demo-body">
+          <div class="mb-3 d-flex flex-wrap gap-2">
+            <button class="btn btn-dark btn-sm">Dark</button>
+            <button class="btn btn-outline-secondary btn-sm">Outline</button>
+            <button class="btn btn-sm btn-danger">Danger</button>
+            <button class="btn btn-sm btn-success">Success</button>
+          </div>
+          <div class="mb-3">
+            <span class="badge bg-dark me-1">Active</span>
+            <span class="badge bg-secondary me-1">Pending</span>
+            <span class="badge bg-danger me-1">Error</span>
+          </div>
+          <div class="alert alert-secondary py-2 mb-3" style="font-size:.84rem;">
+            <i class="bi bi-info-circle me-1"></i> Bootstrap alert component.
+          </div>
+          <div class="card" style="font-size:.875rem;">
+            <div class="card-body py-2 px-3">
+              <h6 class="card-title mb-1">Bootstrap Card</h6>
+              <p class="card-text text-muted mb-2" style="font-size:.8rem;">A content block with built-in styling.</p>
+              <button class="btn btn-sm btn-dark">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub-heading mt-4">Modal</p>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="cb" style="margin-top:0;">
+        <pre><code class="language-html">&lt;button class="btn btn-dark"
+        data-bs-toggle="modal"
+        data-bs-target="#myModal"&gt;Open Modal&lt;/button&gt;
+
+&lt;div class="modal fade" id="myModal"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title"&gt;Confirm&lt;/h5&gt;
+        &lt;button class="btn-close"
+                data-bs-dismiss="modal"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;Are you sure?&lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button class="btn btn-secondary"
+                data-bs-dismiss="modal"&gt;Cancel&lt;/button&gt;
+        &lt;button class="btn btn-dark"&gt;Confirm&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <button class="btn btn-dark btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#demoModal">
+        <i class="bi bi-window me-1"></i> Try the Modal
+      </button>
+    </div>
+
+    <div class="col-md-6">
+      <div class="cb" style="margin-top:0;">
+        <pre><code class="language-html">&lt;!-- Spacing: m/p + direction + size (0-5) --&gt;
+&lt;div class="mt-3 mb-4 px-3 py-2"&gt;...&lt;/div&gt;
+
+&lt;!-- Flexbox utilities --&gt;
+&lt;div class="d-flex align-items-center
+            justify-content-between gap-3"&gt;...&lt;/div&gt;
+
+&lt;!-- Responsive visibility --&gt;
+&lt;div class="d-none d-md-block"&gt;Hidden on mobile&lt;/div&gt;
+
+&lt;!-- Text utilities --&gt;
+&lt;p class="text-muted fw-semibold text-center fs-5"&gt;...&lt;/p&gt;
+
+&lt;!-- Background, shape and shadow --&gt;
+&lt;div class="bg-dark text-white rounded p-3 shadow-sm"&gt;
+  Styled with utilities only
+&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab-bootstrap -->
+
+
+<!-- TAB 5: JAVASCRIPT -->
+<div class="tab-pane fade" id="tab-js">
+
+  <div class="section-heading">
+    <h2>JavaScript</h2>
+    <p>JavaScript runs in the browser and makes pages interactive. With Node.js it also runs on the server, so the same language works across the whole stack.</p>
+  </div>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-6">
+      <div class="concept-card">
+        <div class="c-icon"><i class="bi bi-file-earmark-code"></i></div>
+        <h5>DOM Manipulation</h5>
+        <p>JavaScript can read and change HTML elements in real time. You can update text, add classes, create new elements and remove them without refreshing the page.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="concept-card">
+        <div class="c-icon"><i class="bi bi-arrow-repeat"></i></div>
+        <h5>Async / Fetch API</h5>
+        <p>The Fetch API lets JavaScript call external APIs and get data back. <code>async/await</code> keeps the code readable. <code>Promise.all</code> runs several requests at the same time.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub-heading">ES6+ Features</p>
+  <div class="cb">
+    <pre><code class="language-javascript">// Arrow functions and template literals
+const add   = (a, b) => a + b;
+const greet = name => `Hello, ${name}! Score: ${add(85, 10)}/100.`;
+
+// Destructuring
+const user = { name: 'Mobarak', role: 'Full Stack Dev', level: 3 };
+const { name, role } = user;
+const [first, ...rest] = [10, 20, 30, 40];
+
+// Spread operator
+const arr2   = [...[1,2,3], 4, 5];
+const merged = { ...user, active: true };
+
+// Default parameters
+const createCard = (title, colour = '#111827') => ({ title, colour });
+
+// Optional chaining and nullish coalescing
+const city = user?.address?.city ?? 'Unknown';
+
+// Array methods
+const scores  = [85, 92, 78, 96, 61];
+const passing = scores.filter(s => s >= 70);
+const total   = scores.reduce((acc, s) => acc + s, 0);
+console.log(`Average: ${(total / scores.length).toFixed(1)}`);</code></pre>
+  </div>
+
+  <p class="sub-heading">DOM Manipulation and Events</p>
+  <div class="row g-4 align-items-start">
+    <div class="col-md-6">
+      <div class="cb" style="margin-top:0;">
+        <pre><code class="language-javascript">// Selecting elements
+const btn   = document.querySelector('#myBtn');
+const items = document.querySelectorAll('.item');
+
+// Changing content and style
+const h1 = document.getElementById('title');
+h1.textContent    = 'Updated!';
+h1.style.color    = '#111827';
+h1.classList.add('highlight');
+h1.classList.toggle('active');
+
+// Creating and adding elements
+const li = document.createElement('li');
+li.textContent = 'New item';
+document.querySelector('ul').appendChild(li);
+
+// Event listener
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
+  btn.textContent = 'Clicked!';
+});
+
+// Event delegation - one listener for many items
+document.addEventListener('click', (e) => {
+  if (e.target.matches('.delete-btn')) {
+    e.target.closest('li').remove();
+  }
+});</code></pre>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="demo-box mb-3">
+        <div class="demo-head"><i class="bi bi-lightning"></i> Counter Demo</div>
+        <div class="demo-body">
+          <div id="counter-display">0</div>
+          <div class="d-flex gap-2 justify-content-center">
+            <button class="btn btn-sm btn-outline-secondary" onclick="adjustCounter(-1)">- Decrement</button>
+            <button class="btn btn-sm btn-outline-secondary" onclick="resetCounter()">Reset</button>
+            <button class="btn btn-sm btn-dark" onclick="adjustCounter(1)">Increment +</button>
+          </div>
+          <div class="console-out" id="counter-log">// counter = 0</div>
+        </div>
+      </div>
+      <div class="demo-box">
+        <div class="demo-head"><i class="bi bi-palette"></i> DOM Style Demo</div>
+        <div class="demo-body">
+          <div id="color-box" style="background:#111827;color:white;border-radius:7px;padding:0.9rem;text-align:center;font-weight:600;font-size:.82rem;transition:all .35s;margin-bottom:.75rem;font-family:'JetBrains Mono',monospace;">
+            Click a button to update via JS
+          </div>
+          <div class="d-flex flex-wrap gap-2 justify-content-center">
+            <button class="btn btn-sm btn-dark"              onclick="changeColor('#111827','Dark')">Dark</button>
+            <button class="btn btn-sm btn-outline-secondary" onclick="changeColor('#374151','Slate')">Slate</button>
+            <button class="btn btn-sm btn-outline-secondary" onclick="changeColor('#1d4ed8','Blue')">Blue</button>
+            <button class="btn btn-sm btn-outline-secondary" onclick="changeColor('#15803d','Green')">Green</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub-heading">Async JavaScript and Fetch</p>
+  <div class="cb">
+    <pre><code class="language-javascript">// async / await
+async function getUser(id) {
+  try {
+    const response = await fetch(`/api/users/${id}`);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const user = await response.json();
+    return user;
+  } catch (err) {
+    console.error('Fetch failed:', err.message);
+  }
+}
+
+// Run multiple requests at the same time
+async function loadDashboard() {
+  const [users, posts, stats] = await Promise.all([
+    fetch('/api/users').then(r => r.json()),
+    fetch('/api/posts').then(r => r.json()),
+    fetch('/api/stats').then(r => r.json()),
+  ]);
+  return { users, posts, stats };
+}</code></pre>
+  </div>
+
+  <div class="demo-box mt-1">
+    <div class="demo-head"><i class="bi bi-cloud-download"></i> Live Fetch - calls a real public API</div>
+    <div class="demo-body">
+      <p class="text-muted mb-2" style="font-size:.84rem;">Clicking this fetches data from a public API. The response shows up below without reloading the page.</p>
+      <button class="btn btn-sm btn-dark" onclick="fetchJoke()" id="fetch-btn">
+        <i class="bi bi-cloud-arrow-down me-1"></i> Fetch Data
+      </button>
+      <div id="fetch-result" class="console-out mt-3" style="display:none;"></div>
+    </div>
+  </div>
+
+  <p class="sub-heading">Form Validation</p>
+  <div class="row g-4 align-items-start">
+    <div class="col-md-6">
+      <div class="cb" style="margin-top:0;">
+        <pre><code class="language-javascript">function validateForm(e) {
+  e.preventDefault();
+
+  const email = document.querySelector('#v-email').value.trim();
+  const pass  = document.querySelector('#v-pass').value;
+  const errors = [];
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+    errors.push('Invalid email address.');
+
+  if (pass.length < 8)
+    errors.push('Password must be 8+ characters.');
+
+  if (!/[A-Z]/.test(pass))
+    errors.push('Password needs an uppercase letter.');
+
+  errors.length
+    ? displayErrors(errors)
+    : displaySuccess('Form is valid!');
+}</code></pre>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="demo-box">
+        <div class="demo-head"><i class="bi bi-shield-check"></i> Validation Demo</div>
+        <div class="demo-body">
+          <form id="val-form" onsubmit="validateDemoForm(event)">
+            <div class="mb-2">
+              <label class="form-label fw-medium" style="font-size:.84rem;">Email</label>
+              <input type="text" class="form-control form-control-sm" id="v-email" placeholder="try: bad-email or user@test.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-medium" style="font-size:.84rem;">Password</label>
+              <input type="password" class="form-control form-control-sm" id="v-pass" placeholder="try: short or Str0ngPass">
+            </div>
+            <button class="btn btn-sm btn-dark" type="submit">Validate</button>
+          </form>
+          <div id="val-result" class="mt-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box mt-4">
+    <strong>JavaScript on both sides:</strong> On the frontend it updates the page and calls APIs. On the backend with Node.js it handles routes, database queries and user authentication. One language for the whole application.
+  </div>
+
+</div><!-- /tab-js -->
+
+
+</div><!-- /tab-content -->
+</div><!-- /container -->
+
+
+<!-- MODAL -->
+<div class="modal fade" id="demoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Bootstrap Modal Demo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>This modal opened using <code>data-bs-toggle="modal"</code> and <code>data-bs-target</code> on the button. No custom JavaScript needed.</p>
+        <p class="text-muted mb-0" style="font-size:.875rem;">Bootstrap handles the open, close and backdrop behaviour through its bundled JS plugin and <code>data-bs-*</code> attributes.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark btn-sm" data-bs-dismiss="modal">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
