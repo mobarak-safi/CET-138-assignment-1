@@ -1,7 +1,45 @@
 // Initialise syntax highlighting once DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   updateCounter();
+  initTabUrlSync();
 });
+
+// ── Tab → URL sync (hash routing) ──────────────────────────────
+const TAB_SLUG_TO_PANE = {
+  fullstack:  'tab-fullstack',
+  html:       'tab-html',
+  css:        'tab-css',
+  bootstrap:  'tab-bootstrap',
+  js:         'tab-js',
+};
+
+const TAB_PANE_TO_SLUG = Object.fromEntries(
+  Object.entries(TAB_SLUG_TO_PANE).map(([slug, pane]) => [pane, slug])
+);
+
+function initTabUrlSync() {
+  const tabList = document.getElementById('portfolioTabs');
+  if (!tabList) return;
+
+  tabList.querySelectorAll('[data-bs-toggle="tab"]').forEach((btn) => {
+    btn.addEventListener('shown.bs.tab', (e) => {
+      const paneId = e.target.getAttribute('data-bs-target')?.replace('#', '');
+      const slug   = TAB_PANE_TO_SLUG[paneId];
+      if (slug) {
+        history.replaceState(null, '', `#${slug}`);
+      }
+    });
+  });
+
+  const initialSlug = location.hash.replace('#', '').toLowerCase();
+  const initialPane = TAB_SLUG_TO_PANE[initialSlug];
+  if (initialPane) {
+    const trigger = tabList.querySelector(`[data-bs-target="#${initialPane}"]`);
+    if (trigger && !trigger.classList.contains('active')) {
+      bootstrap.Tab.getOrCreateInstance(trigger).show();
+    }
+  }
+}
 
 // ── Counter demo ─────────────────────────────────────────────
 let count = 0;
